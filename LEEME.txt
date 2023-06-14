@@ -1,7 +1,5 @@
 # desis_prueba
 
-
-
 Instalacion
 
 1) Clonar proyecto en carpeta contenedora de proyectos web (Ej. /var/www/html/): git clone https://github.com/samucoc/desis_prueba.git
