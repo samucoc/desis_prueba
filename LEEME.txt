@@ -1,0 +1,9 @@
+# desis_prueba
+
+Instalacion
+
+1) Clonar proyecto en carpeta contenedora de proyectos web (Ej. /var/www/html/): git clone https://github.com/samucoc/desis_prueba.git
+
+2) Instalar archivo sql de carpeta sql en entorno de BD Mysql
+
+3) Iniciar en navbegador web la siguiente direccion: http://localhost/desis_prueba
