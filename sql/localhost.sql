@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 14-06-2023 a las 00:52:58
+-- Tiempo de generación: 14-06-2023 a las 11:53:54
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -20,8 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `desis_db`
 --
+DROP DATABASE IF EXISTS `desis_db`;
 CREATE DATABASE IF NOT EXISTS `desis_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 USE `desis_db`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `candidatos`
+--
+
+CREATE TABLE `candidatos` (
+  `id` int NOT NULL,
+  `nombre` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `candidatos`
+--
+
+INSERT INTO `candidatos` (`id`, `nombre`) VALUES
+(1, 'candidato 1'),
+(2, 'candidato 2'),
+(3, 'candidato 3'),
+(4, 'candidato 4');
 
 -- --------------------------------------------------------
 
@@ -525,11 +547,20 @@ INSERT INTO `votantes` (`id`, `nombre`, `apellido`, `alias`, `rut`, `email`, `re
 (2, 'fdsadasf', 'asdffsd', 'asdfsadfdsf', '7981959-k', 'samu.silva@gmail.com', '11', '219', '1', 'Array', '2023-06-13 20:49:45'),
 (3, 'fdsadasf', 'asdffsd', 'asdfsadfdsf', '7981959-k', 'samu.silva@gmail.com', '11', '219', '1', 'Array', '2023-06-13 20:50:04'),
 (4, 'fdsadasf', 'asdffsd', 'asdfsadfdsf', '7981959-k', 'samu.silva@gmail.com', '11', '219', '1', 'web,tv,redes,amigo', '2023-06-13 20:51:12'),
-(5, 'asfdasdf', 'afsdadsf', 'afdsdsfadsfafsdasfd', '15.829.807-4', 'samu.silva@gmail.com', '11', '219', '1', 'web,redes', '2023-06-13 20:52:17');
+(5, 'asfdasdf', 'afsdadsf', 'afdsdsfadsfafsdasfd', '15.829.807-4', 'samu.silva@gmail.com', '11', '219', '1', 'web,redes', '2023-06-13 20:52:17'),
+(6, 'dsfadsfa', 'sdafsdf', 'sdfdsafasdf123', '15.829.807-4', 'samu.silva@gmail.com', '11', '219', '2', 'web', '2023-06-13 21:12:51'),
+(7, 'dsfadsfa', 'sdafsdf', 'sdfdsafasdf123', '15.829.807-4', 'samu.silva@gmail.com', '11', '219', '2', 'web,tv', '2023-06-13 21:12:55'),
+(8, 'Samuel Felipe', 'silva Díaz', 'afsdasdf2122', '15829807-4', 'samu.silva@gmail.com', '11', '219', '1', 'web,tv', '2023-06-13 21:26:10');
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `candidatos`
+--
+ALTER TABLE `candidatos`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `comunas`
@@ -560,6 +591,12 @@ ALTER TABLE `votantes`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `candidatos`
+--
+ALTER TABLE `candidatos`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `comunas`
 --
 ALTER TABLE `comunas`
@@ -581,7 +618,7 @@ ALTER TABLE `regiones`
 -- AUTO_INCREMENT de la tabla `votantes`
 --
 ALTER TABLE `votantes`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
